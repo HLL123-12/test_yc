@@ -1,7 +1,5 @@
 requests
-re
 pandas
 smtplib
-email
-schedule
+pyemail
 time
