@@ -1,5 +1,4 @@
 requests
 pandas
-smtplib
 pyemail
 time
