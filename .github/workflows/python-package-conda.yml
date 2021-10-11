@@ -2,22 +2,24 @@ name: Python Package using Conda
 
 on:
   push:
-    branches: [ master ]
-  schedule:
-    - cron: "26 12 * * *"
+    branches: 
+      - master
+    schedule:
+      - cron: '40 12 * * *'
+
 jobs:
-  emailbot:
-    runs-on: windows-latest
+  csdn-emailbot:
+    runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
       - name: 'Set up Python'
         uses: actions/setup-python@v1
         with:
           python-version: 3.7
-      - name: Install dependencies
-        run: 
-          pip install requirements.txt
-      - name: working
-        run: 
-          bash  auto_wb_qq.py
+      # - name: 'Install dependencies'
+      #   run: python -m pip install --upgrade pip
+      - name: 'Install requirements'
+        run: pip install requirements.txt
+      - name: 'Working'
+        run: bash anto_wb_qq.py
