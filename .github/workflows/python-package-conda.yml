@@ -4,22 +4,20 @@ on:
   push:
     branches: [ master ]
   schedule:
-    - cron: "* * * * *"
+    - cron: "23 12 * * *"
 jobs:
-  build:
+emailbot:
     runs-on: windows-latest
-    strategy:
-      max-parallel: 5
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.7
-    - name: Install dependencies
-      run: 
-        pip install -r ./requirements.txt
-    - name: working
-      run: 
-        bash ./auto_wb_qq.py
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install dependencies
+        run: 
+          pip install requirements.txt
+      - name: working
+        run: 
+          bash  auto_wb_qq.py
