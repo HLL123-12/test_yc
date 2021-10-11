@@ -95,7 +95,7 @@ def email(df):
                df.iloc[4,:]['href'],df.iloc[4,:]['关键词'],
                df.iloc[5,:]['href'],df.iloc[5,:]['关键词'])
     mer.attach(MIMEText(head, 'html', 'utf-8'))
-    fujian = MIMEText(open('微博热搜.csv', 'rb').read(), 'base64', 'utf-8')
+    fujian = MIMEText(open('微博热搜.csv', 'utf-8').read(), 'base64', 'utf-8')
     fujian["Content-Type"] = 'application/octet-stream'  #附件内容
     fujian.add_header('Content-Disposition', 'file', filename=('utf-8', '', '微博热搜.csv'))  
     mer.attach(fujian)
