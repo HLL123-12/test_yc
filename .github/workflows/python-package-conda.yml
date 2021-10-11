@@ -4,10 +4,7 @@ on:
   push:
     branches: [ master ]
   schedule:
-    - cron: "30 0 * * *"
-    - cron: "0 4 * * *"
-    - cron: "0 10 * * *"
-    - cron: "58 11 * * *"
+    - cron: "* * * * *"
 jobs:
   build:
     runs-on: windows-latest
