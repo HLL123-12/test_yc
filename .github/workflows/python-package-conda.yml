@@ -4,9 +4,9 @@ on:
   push:
     branches: [ master ]
   schedule:
-    - cron: "23 12 * * *"
+    - cron: "26 12 * * *"
 jobs:
-emailbot:
+  emailbot:
     runs-on: windows-latest
     steps:
       - name: checkout
