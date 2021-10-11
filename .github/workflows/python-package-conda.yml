@@ -22,7 +22,7 @@ jobs:
         python-version: 3.7
     - name: Install dependencies
       run: 
-        pip install -r ./main/requirements.txt
+        pip install -r ./requirements.txt
     - name: working
       run: 
-        bash ./main/auto_wb_qq.py
+        bash ./auto_wb_qq.py
