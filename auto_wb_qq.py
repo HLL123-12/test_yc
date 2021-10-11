@@ -118,12 +118,6 @@ def email(df):
 if __name__ == '__main__':
     title1, amount1, category1, href1 = getnr()  
     result = shujuwish(title1,amount1,category1,href1)
-    schedule.every().day.at("08:30").do(email,result)
-    schedule.every().day.at("12:00").do(email,result)
-    schedule.every().day.at("18:00").do(email,result)
-    while True:
-        schedule.run_pending()
-        time.sleep(10)
-    # email(result)
+    email(result)
 
 
