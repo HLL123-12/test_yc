@@ -95,7 +95,7 @@ def email(df,wea):
 
     mer = MIMEMultipart()
     # 设置邮件正文内容
-     head = '''
+    head = '''
     <p style="color:OrangeRed">微博热搜及天气</p>
     <p style="color:Lime">天气: "{}"</p>
     <p>最热门词条为</p>
